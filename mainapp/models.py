@@ -22,7 +22,7 @@ class Category(models.Model):
 
 class PhotoCard(models.Model):
     title = models.CharField(max_length=256, null=True)
-    front_image = models.ImageField(upload_to='photo_front_img', blank=True)
+    photo = models.ImageField(upload_to='photo_img', blank=True)
     publication_date = models.DateTimeField(auto_now_add=True, blank=False, null=False)
     category = models.ForeignKey(Category, verbose_name='Категория', on_delete=models.CASCADE)
 
@@ -40,7 +40,7 @@ class PhotoCard(models.Model):
 
 class TextBlock(models.Model):
     title = models.CharField(max_length=256, verbose_name='Заголовок блока', null=True)
-    main_information = models.CharField(blank=True, max_length=512, verbose_name='Текст блока', default='')
+    information = models.CharField(blank=True, max_length=512, verbose_name='Текст блока', default='')
 
     class Meta:
         verbose_name = '<Текстовый блок>'
@@ -54,8 +54,8 @@ class TextBlock(models.Model):
 
 
 class ImageBlock(models.Model):
-    title = models.CharField(max_length=256, verbose_name='Название фото', null=True)
-    author_photo = models.ImageField(upload_to='photo', verbose_name='Фото', blank=True)
+    title = models.CharField(max_length=256, verbose_name='Название картинки', null=True)
+    image = models.ImageField(upload_to='image', verbose_name='файл картинки', blank=True)
 
     class Meta:
         verbose_name = 'Картинка'
