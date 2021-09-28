@@ -1,0 +1,11 @@
+coverage==5.5
+cryptography==3.4.8
+Django==3.2.6
+djangorestframework==3.12.4
+Markdown==3.3.4
+pyee==8.2.2
+PyJWT==2.1.0
+six==1.16.0
+txaio==21.2.1
+typing-extensions==3.10.0.2
+zope.interface==5.4.0
