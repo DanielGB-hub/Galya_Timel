@@ -7,4 +7,3 @@ urlpatterns = [
     path('api/textblock/', views.TextBlockListCreate.as_view()),
     path('api/imageblock/', views.ImageBlockListCreate.as_view()),
 ]
-# (dev)
